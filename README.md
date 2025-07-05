@@ -41,6 +41,18 @@ pip install requests pandas
 - The script fetches audio features one track at a time to avoid 403 errors and rate limits.
 - The script includes a delay to avoid hitting Spotify API rate limits.
 
+## Known Issues & Limitations
+
+- Originally, this project aimed to scrape the **Spotify Top 50 Global** playlist, but audio features were **not accessible** for many tracks due to API restrictions or playlist type.
+- Switched to the **Billboard Hot 100** playlist on Spotify as an alternative.
+- However, even with a valid user token and proper OAuth flow, **audio feature requests** (via `/v1/audio-features`) consistently returned **403 Forbidden** errors for all tracks.
+- Affected fields include:
+
+```vbnet
+danceability, energy, key, loudness, mode, speechiness,
+acousticness, instrumentalness, liveness, valence, tempo, time_signature
+
+
 ## Output
 - The resulting CSV file contains columns for track metadata and audio features for each song in the playlist.
 
