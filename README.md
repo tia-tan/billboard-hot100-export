@@ -54,7 +54,7 @@ acousticness, instrumentalness, liveness, valence, tempo, time_signature
 ```
 
 ## Output
-- The resulting CSV file contains columns for track metadata and audio features for each song in the playlist.
+– The resulting CSV file contains columns for track metadata and audio features for each song in the playlist.
 
 ## License
-MIT 
+MIT
